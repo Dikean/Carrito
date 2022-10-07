@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create || Producto</title>
+    <!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+   <script type='text/javascript'src="Createproducto.js"></script>
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar w/ text</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="productos.html">Home</a>
+              </li>
+              </ul>
+            <span class="navbar-text">
+                 <a href="detalleCarrito.html"><i class="bi bi-cart3"></i> Carrito<span id="total">[0]</span></a>
+            </span>
+          </div>
+        </div>
+      </nav>
+      <!--cuadro contenido del form-->
+      <div class="shadow-lg p-3 mb-5 bg-white rounded" style="width: 600px; height: 380px; margin-left:30%; margin-top: 2%;">
+    
+        <!--Form-->
+    
+            <div class="form-group">
+
+                  <!--ID -NOmBRE-->
+                  <div class="row">
+                     <!--ID -->
+                    <div class="col-md-6">
+                      <label for="exampleInputEmail1">Id</label>
+                      <input type="text" class="form-control" id="id_producto" aria-describedby="emailHelp" >
+                    </div>
+                       <!--ID -NOmBRE-->
+                    <div class="col-md-6">
+                      <label for="exampleInputPassword1">Nombre</label>
+                      <input type="text" class="form-control" id="nombre_prodructo">
+                    </div>
+                  </div>
+                      
+            </div>
+            
+            <div class="form-group">
+                <label for="exampleInputPassword1">Descripcion</label>
+                <!-- <input type="text" class="form-control" id="descripcion_producto" > -->
+                <textarea id="descripcion_producto" type="text" class="form-control" ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Precio</label>
+                <input type="text" class="form-control" id="precio_producto" >
+              </div>
+           
+              <div class="form-group">
+                <label for="exampleInputPassword1">Foto:</label>   <br>
+                <!-- <input type="text" class="form-control" id="foto_producto" > -->
+                <select id="foto_producto">
+                  <option  >./img/junior.jpg</option>
+                  <option >./img/Laptop.jpg</option>
+                  <option >./img/phone.jpg</option>
+                  
+                </select>
+              </div>
+            
+            <br/><button type="submit" class="btn btn-primary" onclick="GuardarLocal()">Add productos</button>
+            <button type="submit" class="btn btn-danger" onclick="limpiar()">delete All Productos</button>
+        
+        <!--end Form-->
+
+
+
+    </div>  <!--end cuadro contenido del form-->
+  
+     <!--cudro de productos-->
+     <div class="container">
+		
+     <div class="row" id="cuadroproductos">
+ 
+        
+     </div>
+ 
+   </div><!--  contenedor -->
+
+    <script type="text/javascript" src="productos.js"></script>
+</body>
+</html>
